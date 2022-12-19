@@ -34,7 +34,7 @@ spec:
 
       - name: frontend
 
-        image: atefdev2/udagram-frontend:local
+        image: atefdev2/udagram-frontend:v1
 
         ports:
         - containerPort: 80
@@ -44,7 +44,7 @@ spec:
             name: udagram-env
         - secretRef:
             name: postgres
-            
+
         resources:
           limits:
             cpu: 500m

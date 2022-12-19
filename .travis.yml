@@ -24,7 +24,7 @@ script:
   - docker tag reverseproxy atefdev2/reverseproxy:v1
   - docker tag udagram-api-feed atefdev2/udagram-api-feed:v1
   - docker tag udagram-api-user atefdev2/udagram-api-user:v1
-  - docker tag udagram-frontend atefdev2/udagram-frontend:local
+  - docker tag udagram-frontend atefdev2/udagram-frontend:v1
 
 
 
@@ -34,5 +34,5 @@ after_success:
   - docker push atefdev2/reverseproxy:v1
   - docker push atefdev2/udagram-api-feed:v1
   - docker push atefdev2/udagram-api-user:v1
-  - docker push atefdev2/udagram-frontend:local
+  - docker push atefdev2/udagram-frontend:v1
   
