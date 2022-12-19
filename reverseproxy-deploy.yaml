@@ -39,6 +39,13 @@ spec:
         ports:
 
         - containerPort: 8080
+
+        envFrom: 
+        - configMapRef:
+            name: udagram-env
+        - secretRef:
+            name: postgres
+            
         resources:
           limits:
             cpu: 500m

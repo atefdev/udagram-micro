@@ -29,11 +29,8 @@ spec:
         app: backend-feed
 
     spec:
-
       containers:
-
       - name: backend-feed
-
         image: atefdev2/udagram-api-feed:v1
 
         ports:

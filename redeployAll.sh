@@ -45,6 +45,7 @@ kubectl delete service publicfrontend
 #Portforward 
 kubectl expose deployment frontend --type=LoadBalancer --name=publicfrontend
 
+port-forward service/reverseproxy 8080:8080
 kubectl port-forward service/frontend 8100:8100
 
 #Delete evicted pods
