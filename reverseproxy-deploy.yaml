@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+
+  name: reverseproxy
+
+  labels:
+
+    app: reverseproxy
+
+spec:
+
+  replicas: 2
+
+  selector:
+
+    matchLabels:
+
+      app: reverseproxy
+
+  template:
+
+    metadata:
+
+      labels:
+
+        app: reverseproxy
+
+    spec:
+
+      containers:
+
+      - name: reverseproxy
+
+        image: atefdev2/reverseproxy:v1
+
+        ports:
+
+        - containerPort: 8080
+
+        envFrom: 
+        - configMapRef:
+            name: udagram-env
+        - secretRef:
+            name: postgres
+            
+        resources:
+          limits:
+            cpu: 500m
+          requests:
+            cpu: 200m
+       
+      
